@@ -20,6 +20,44 @@
             display: flex;
             justify-content: space-between;
         }
+        .familyList{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .family{
+            display: inline-block;
+            margin: 5px;
+            text-align: justify;
+            padding: 5px;
+            color: white;
+            background-color: darkslategray;
+            border-radius: 5px;
+        }
+        .family img{
+            width: 330px;
+            height: 270px;
+        }
+        .family p{
+            font-family: "calibri";
+            font-size: 20px;
+            text-align: justify;
+            width: 330px;
+        }
+        .button1 {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color:white; 
+            color: darkslategray; 
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+
+        .button1:hover {
+            color: #ddddc8; 
+        }
+
     </style>
 </head>
 
@@ -62,6 +100,186 @@
                 <button type="submit" class="searchButton"><img src="search.png" alt="searchHere"></button>
             </div>
         </div>
+
+        <div id="familyList">
+            <div class="family">
+                <img src="family1.jpeg" alt="">
+                <h2>Smith Family</h2>
+                <p>Location: New York</p>
+                <p>Family Size: 4</p>
+                <p>Description: The Smith family from New York consists of 4 members. They are a loving family who enjoys outdoor activities.</p>
+            </div>
+            <div class="family">
+                <img src="family10.png" alt="">
+                <h2>Johnson Family</h2>
+                <p>Location: California</p>
+                <p>Family Size: 3</p>
+                <p>Description: The Johnson family from California is a small, close-knit family of 3. They love animals and enjoy going on adventures together.</p>
+            </div>
+            <div class="family">
+                <img src="family2.png" alt="">
+                <h2>Williams Family</h2>
+                <p>Location: Texas</p>
+                <p>Family Size: 5</p>
+                <p>Description: The Williams family resides in Texas and consists of 5 members. They are active and enjoy sports, hiking, and exploring nature.</p>
+            </div>
+            <div class="family">
+                <img src="family3.jpeg" alt="">
+                <h2>Miller Family</h2>
+                <p>Location: Florida</p>
+                <p>Family Size: 2</p>
+                <p>Description: The Miller family from Florida is a loving couple who enjoys spending time at the beach and trying new foods.</p>
+            </div>
+            <div class="family">
+                <img src="family4.jpg" alt="">
+                <h2>Brown Family</h2>
+                <p>Location: Illinois</p>
+                <p>Family Size: 6</p>
+                <p>Description: The Brown family from Illinois is a large and active family of 6. They enjoy sports, camping, and family movie nights.</p>
+            </div>
+            <div class="family">
+                <img src="family5.jpeg" alt="">
+                <h2>Lee Family</h2>
+                <p>Location: Washington</p>
+                <p>Family Size: 4</p>
+                <p>Description: The Lee family resides in Washington and consists of 4 members. They are a creative family who enjoys art, music, and cooking together.</p>
+            </div>
+            <div class="family">
+                <img src="family6.jpeg" alt="">
+                <h2>Anderson Family</h2>
+                <p>Location: Colorado</p>
+                <p>Family Size: 3</p>
+                <p>Description: The Anderson family from Colorado is an adventurous family of 3 who loves hiking, skiing, and exploring the outdoors.</p>
+            </div>
+            <div class="family">
+                <img src="family7.jpeg" alt="">
+                <h2>Clark Family</h2>
+                <p>Location: Arizona</p>
+                <p>Family Size: 5</p>
+                <p>Description: The Clark family from Arizona is a fun-loving family of 5. They enjoy traveling, trying new foods, and playing board games.</p>
+            </div>
+            <div class="family">
+                <img src="family8.jpg" alt="">
+                <h2>Walker Family</h2>
+                <p>Location: Oregon</p>
+                <p>Family Size: 4</p>
+                <p>Description: The Walker family resides in Oregon and consists of 4 members. They are an active family who enjoys hiking, biking, and gardening.</p>
+            </div>
+            <div class="family">
+                <img src="family9.jpg" alt="">
+                <h2>Harris Family</h2>
+                <p>Location: Georgia</p>
+                <p>Family Size: 3</p>
+                <p>Description: The Harris family from Georgia is a close-knit family of 3 who enjoys spending time together outdoors, cooking, and watching movies.</p>
+            </div>
+            <div>
+                <a href="aboutUsPage.html" class="button1">NEXT PAGE</a>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 20px;">More Details about these families</h2>
+
+        <table>
+            <tr>
+                <th>Family Name</th>
+                <th>Location</th>
+                <th>Family Size</th>
+                <th>Description</th>
+                <th>Contact Email</th>
+                <th>Contact Phone</th>
+                <th>Adoption Status</th>
+            </tr>
+            <tr>
+                <td>Smith Family</td>
+                <td>New York</td>
+                <td>4</td>
+                <td>The Smith family from New York consists of 4 members. They are a loving family who enjoys outdoor activities.</td>
+                <td>smithfamily@example.com</td>
+                <td>123-456-7890</td>
+                <td>Available for Adoption</td>
+            </tr>
+            <tr>
+                <td>Johnson Family</td>
+                <td>California</td>
+                <td>3</td>
+                <td>The Johnson family from California is a small, close-knit family of 3. They love animals and enjoy going on adventures together.</td>
+                <td>johnsonfamily@example.com</td>
+                <td>987-654-3210</td>
+                <td>Pending Adoption</td>
+            </tr>
+            <tr>
+                <td>Williams Family</td>
+                <td>Texas</td>
+                <td>5</td>
+                <td>The Williams family resides in Texas and consists of 5 members. They are active and enjoy sports, hiking, and exploring nature.</td>
+                <td>williamsfamily@example.com</td>
+                <td>456-789-0123</td>
+                <td>Available for Adoption</td>
+            </tr>
+            <tr>
+                <td>Miller Family</td>
+                <td>Florida</td>
+                <td>2</td>
+                <td>The Miller family from Florida is a loving couple who enjoys spending time at the beach and trying new foods.</td>
+                <td>millerfamily@example.com</td>
+                <td>321-654-9870</td>
+                <td>Not Available for Adoption</td>
+            </tr>
+            <tr>
+                <td>Brown Family</td>
+                <td>Illinois</td>
+                <td>6</td>
+                <td>The Brown family from Illinois is a large and active family of 6. They enjoy sports, camping, and family movie nights.</td>
+                <td>brownfamily@example.com</td>
+                <td>789-012-3456</td>
+                <td>Available for Adoption</td>
+            </tr>
+            <tr>
+                <td>Lee Family</td>
+                <td>Washington</td>
+                <td>4</td>
+                <td>The Lee family resides in Washington and consists of 4 members. They are a creative family who enjoys art, music, and cooking together.</td>
+                <td>leefamily@example.com</td>
+                <td>567-890-1234</td>
+                <td>Pending Adoption</td>
+            </tr>
+            <tr>
+                <td>Anderson Family</td>
+                <td>Colorado</td>
+                <td>3</td>
+                <td>The Anderson family from Colorado is an adventurous family of 3 who loves hiking, skiing, and exploring the outdoors.</td>
+                <td>andersonfamily@example.com</td>
+                <td>210-543-6789</td>
+                <td>Available for Adoption</td>
+            </tr>
+            <tr>
+                <td>Clark Family</td>
+                <td>Arizona</td>
+                <td>5</td>
+                <td>The Clark family from Arizona is a fun-loving family of 5. They enjoy traveling, trying new foods, and playing board games.</td>
+                <td>clarkfamily@example.com</td>
+                <td>901-234-5678</td>
+                <td>Not Available for Adoption</td>
+            </tr>
+            <tr>
+                <td>Walker Family</td>
+                <td>Oregon</td>
+                <td>4</td>
+                <td>The Walker family resides in Oregon and consists of 4 members. They are an active family who enjoys hiking, biking, and gardening.</td>
+                <td>walkerfamily@example.com</td>
+                <td>543-678-9012</td>
+                <td>Available for Adoption</td>
+            </tr>
+            <tr>
+                <td>Harris Family</td>
+                <td>Georgia</td>
+                <td>3</td>
+                <td>The Harris family from Georgia is a close-knit family of 3 who enjoys spending time together outdoors, cooking, and watching movies.</td>
+                <td>harrisfamily@example.com</td>
+                <td>678-901-2345</td>
+                <td>Pending Adoption</td>
+            </tr>
+        </table>
     </div>
 
     <div class="footer">

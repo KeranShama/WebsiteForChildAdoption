@@ -116,3 +116,26 @@ nav div{
     padding: 50px;
     margin: 20px;
 }
+
+table {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: 'Calibri';
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: darkslategray;
+    color: white;
+    font-size: 20px;
+}
+td{
+    background-color: white;
+    color: darkslategray;
+    font-size: 20px;
+}

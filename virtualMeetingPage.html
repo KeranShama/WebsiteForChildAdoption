@@ -2,8 +2,76 @@
 <html>
 <head>
     <link rel="shortcut icon" type="image/png" href="logo.png" >
-    <title>Register for Virtual Meeting</title>
+    <title>Register for a Virtual Meeting</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .content h2{
+            font-family: "bahnschrift";
+            font-size: 30px;
+            color: darkslategray;
+            margin-bottom: 20px;
+        }
+        .content p,li{
+            font-family: calibri;
+            font-size: 20px;
+            text-align: justify;
+        }
+        form {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .required::after {
+            content: "*";
+            color: red;
+        }
+        input[type="text"],
+        input[type="number"]
+        input[type="email"]{
+            height: 30px;
+        }
+        input[type="text"],
+        input[type="number"]
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid darkslategray;
+            box-sizing: border-box;
+        }
+        
+        .submit{
+            background-color: white;
+            color: darkslategrey;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        .submit:hover {
+            background-color: #ddddc8;
+        }
+
+        .box{
+            color: white;
+            background-color: darkslategray;
+            border-radius: 5px;
+        }
+        
+        
+    </style>
 </head>
 
 <body>
@@ -38,7 +106,58 @@
     </nav>
 
     <div class="content">
-
+        <h2>Register for a Virtual Meeting</h2>
+        <div class="box">
+            <form>
+                <ul>
+                    <li>
+                        <p><br>This virtual meeting registration form is to streamline the process of connecting potential adoptive parents with our counselors. By providing a convenient platform for individuals to register their interest in attending virtual meetings, we aim to facilitate efficient communication and collaboration between adoptive families and adoption professionals, ultimately fostering the adoption process in a supportive and accessible manner.</p> <br><br>
+                    </li>
+                    <li>
+                        <label class="required">First Name:</label>
+                        <input type="text" required>
+                    </li>
+                    <li>
+                        <label class="required">Last Name:</label>
+                        <input type="text" required>
+                    </li>
+                    <li>
+                        <label class="required">Email Address:</label>
+                        <input type="email" required>
+                    </li>
+                    <li>
+                        <label class="required"><br>Country:</label>
+                        <select required>
+                            <option>Select a Country</option>
+                            <option>Sri Lanka</option>
+                            <option>United States</option>
+                            <option>Canada</option>
+                            <option>United Kingdom</option>
+                            <option>Other Countries</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label class="required">Zip/Postal Code:</label>
+                        <input type="text" required>
+                    </li>
+                    <li>
+                        <label>State/Province:</label>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <label class="required">Phone:</label>
+                        <input type="number" required>
+                    </li>
+                    <li>
+                        <label><br>Questions & Comments:</label>
+                        <textarea rows="4"></textarea>
+                    </li>
+                    <li>
+                        <input type="submit" value="Register" class="submit">
+                    </li>
+                </ul>
+            </form>   
+        </div>
     </div>
 
     <div class="footer">
