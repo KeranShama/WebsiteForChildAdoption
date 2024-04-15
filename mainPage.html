@@ -79,6 +79,10 @@
         .button1:hover {
             color: #ddddc8; 
         }
+        iframe{
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -100,8 +104,8 @@
                 </ul>
             </div>
             <div class="search">
-                <input type="text" placeholder="Search">
-                <button type="submit" class="searchButton"><img src="search.png" alt="searchHere"></button>
+                <input type="text" placeholder="Search" id="searchInput">
+                <button type="submit" class="searchButton" id="searchButton"><img src="search.png" alt="searchHere"></button>
             </div>
             <div class="login">
                 <img src="user.png" alt="user"  height="40px" width="40px" style="display: inline-block;">
@@ -111,7 +115,6 @@
                 <a href="signupPage.html">
                     <p style="margin-left: 5px; font-size: 18px; ;"> Sign Up</p>
                 </a>
-
             </div>
         </div>
         
@@ -149,11 +152,11 @@
         <p>Choosing an adoptive family for your baby is a deeply personal and important decision. At Forever Family Finder, we understand the significance of finding the right family who will provide love, support, and stability for your child. Our experienced team is here to assist you in navigating this process with care and compassion. We offer a wide selection of loving and qualified adoptive families, each carefully screened and ready to welcome a new member into their hearts and homes. Whether you're looking for a family with specific qualities or values, we are committed to helping you find the perfect match for your baby's future.<a href="chooseFamilyPage.html" class="button1">LEARN MORE</a></p>
 
         <h2>Register for virtual meetings</h2>
-        <p>Register for our virtual meeting and take the next step towards growing your family. Our virtual meetings provide a convenient and accessible way for prospective parents to learn more about the adoption process, ask questions, and connect with our team of experts. Join us from the comfort of your own home as we discuss important topics such as adoption requirements, available services, and the steps involved in welcoming a child into your family. Whether you're just beginning your adoption journey or looking to expand your family, our virtual meetings offer valuable insights and support to help you make informed decisions and move forward with confidence.<a href="virtualMeetingPage.html" class="button1">LEARN MORE</a></p>
+        <p>Register for our virtual meeting and take the next step towards growing your family. Our virtual meetings provide a convenient and accessible way for prospective parents to learn more about the adoption process, ask questions, and connect with our team of experts. Join us from the comfort of your own home as we discuss important topics such as adoption requirements, available services, and the steps involved in welcoming a child into your family. Whether you're just beginning your adoption journey or looking to expand your family, our virtual meetings offer valuable insights and support to help you make informed decisions and move forward with confidence.<a href="virtualMeetingPage.html" class="button1">LEARN MORE</a><br><br></p>
 
+        <iframe width="679" height="382" src="https://www.youtube.com/embed/n3w4yl8KwC8" title="We Adopted a Baby." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     </div>
-
 
     <div class="footer">
         <a href="https://www.instagram.com/?hl=en">
@@ -169,6 +172,34 @@
         <br>
         &copy; 2024 ForeverFamilyFinder. <br>All rights reserved.
     </div>
-    
+
+    <!--
+    <script>
+        document.getElementById('searchButton').addEventListener('click', function() {    
+            var searchTerm = document.getElementById('searchInput').value;
+            document.write('Search term: ', searchTerm);
+        });
+    </script>
+-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('searchButton').addEventListener('click', function() {    
+                var searchTerm = document.getElementById('searchInput').value;
+                var content = document.querySelector('.content').innerHTML;
+                var regex = new RegExp('(' + searchTerm + ')', 'gi');
+                var highlightedContent = content.replace(regex, '<mark>$1</mark>');
+                document.querySelector('.content').innerHTML = highlightedContent;
+                
+                if (highlightedContent === content) {
+                    alert('Search term not found.');
+                }
+                });
+                document.body.addEventListener('click', function(event) {
+                if (event.target !== searchButton) {
+                    location.reload();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

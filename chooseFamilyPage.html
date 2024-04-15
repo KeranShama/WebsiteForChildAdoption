@@ -96,8 +96,8 @@
         <div class="head">
             <h2>Choose an Adoptive Family for your Baby</h2>
             <div class="search">
-                <input type="text" placeholder="Search word">
-                <button type="submit" class="searchButton"><img src="search.png" alt="searchHere"></button>
+                <input type="text" placeholder="Search" id="searchInput">
+                <button type="submit" class="searchButton" id="searchButton"><img src="search.png" alt="searchHere"></button>
             </div>
         </div>
 
@@ -296,7 +296,28 @@
         <br>
         &copy; 2024 ForeverFamilyFinder. <br>All rights reserved.
     </div>
-    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('searchButton').addEventListener('click', function() {    
+                var searchTerm = document.getElementById('searchInput').value;
+                var content = document.querySelector('.content').innerHTML;
+                var regex = new RegExp('(' + searchTerm + ')', 'gi');
+                var highlightedContent = content.replace(regex, '<mark>$1</mark>');
+                document.querySelector('.content').innerHTML = highlightedContent;
+                
+                if (highlightedContent === content) {
+                    alert('Search term not found.');
+                }
+                
+                document.body.addEventListener('click', function(event) {
+                if (event.target !== searchButton) {
+                    location.reload();
+                }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

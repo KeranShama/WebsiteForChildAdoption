@@ -51,7 +51,7 @@ ul,li{
     text-decoration: none;
 }
 .login a:hover{
-    color: #ddddc8 !important; /*when overcome the overridden css property*/
+    color: #ddddc8 !important; 
 }
 .login a:visited{
     color: white;

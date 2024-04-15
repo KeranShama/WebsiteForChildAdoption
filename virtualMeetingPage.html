@@ -115,19 +115,19 @@
                     </li>
                     <li>
                         <label class="required">First Name:</label>
-                        <input type="text" required>
+                        <input type="text" id="firstName" required>
                     </li>
                     <li>
                         <label class="required">Last Name:</label>
-                        <input type="text" required>
+                        <input type="text" id="lastName" required>
                     </li>
                     <li>
                         <label class="required">Email Address:</label>
-                        <input type="email" required>
+                        <input type="email" id="email" required>
                     </li>
                     <li>
                         <label class="required"><br>Country:</label>
-                        <select required>
+                        <select id="country" required>
                             <option>Select a Country</option>
                             <option>Sri Lanka</option>
                             <option>United States</option>
@@ -138,7 +138,7 @@
                     </li>
                     <li>
                         <label class="required">Zip/Postal Code:</label>
-                        <input type="text" required>
+                        <input type="text" id="zipCode" required>
                     </li>
                     <li>
                         <label>State/Province:</label>
@@ -146,7 +146,7 @@
                     </li>
                     <li>
                         <label class="required">Phone:</label>
-                        <input type="number" required>
+                        <input type="number" id="phone" required>
                     </li>
                     <li>
                         <label><br>Questions & Comments:</label>
@@ -174,7 +174,31 @@
         <br>
         &copy; 2024 ForeverFamilyFinder. <br>All rights reserved.
     </div>
-    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.querySelector('form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+
+                var firstName = document.getElementById('firstName').value;
+                var lastName = document.getElementById('lastName').value;
+                var email = document.getElementById('email').value;
+                var country = document.getElementById('country').value;
+                var zipCode = document.getElementById('zipCode').value;
+                var phone = document.getElementById('phone').value;
+
+                if (firstName.trim() === '' || lastName.trim() === '' || email.trim() === '' || country === 'Select a Country' || zipCode.trim() === '' || phone.trim() === '') {
+                    alert('Please fill in all required fields.');
+                    return false; 
+                }
+
+                alert('Form submitted successfully!');
+                form.reset(); 
+            });
+        });
+    </script>
+
 </body>
 
 </html>
