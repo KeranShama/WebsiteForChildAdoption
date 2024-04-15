@@ -108,7 +108,7 @@
     <div class="content">
         <h2>Register for a Virtual Meeting</h2>
         <div class="box">
-            <form>
+            <form id="rForm">
                 <ul>
                     <li>
                         <p><br>This virtual meeting registration form is to streamline the process of connecting potential adoptive parents with our counselors. By providing a convenient platform for individuals to register their interest in attending virtual meetings, we aim to facilitate efficient communication and collaboration between adoptive families and adoption professionals, ultimately fostering the adoption process in a supportive and accessible manner.</p> <br><br>
@@ -126,8 +126,8 @@
                         <input type="email" id="email" required>
                     </li>
                     <li>
-                        <label class="required"><br>Country:</label>
-                        <select id="country" required>
+                        <label><br>Country:</label>
+                        <select id="country">
                             <option>Select a Country</option>
                             <option>Sri Lanka</option>
                             <option>United States</option>
@@ -175,6 +175,7 @@
         &copy; 2024 ForeverFamilyFinder. <br>All rights reserved.
     </div>
 
+    <!--
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var form = document.querySelector('form');
@@ -196,6 +197,18 @@
                 alert('Form submitted successfully!');
                 form.reset(); 
             });
+        });
+    </script>
+    -->
+
+    <script>
+        document.getElementById("rForm").addEventListener("submit", function(event) {
+        event.preventDefault();   
+
+        alert("Registered successfully!");
+        document.getElementById("rForm").reset();
+        window.location.href = "mainPage.html";
+
         });
     </script>
 

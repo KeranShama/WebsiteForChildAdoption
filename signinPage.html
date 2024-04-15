@@ -11,10 +11,11 @@
             position: relative;
         }
         .content h2{
-            font-family: "bahnschrift";
+            font-family: 'Times New Roman', Times, serif;
             font-size: 30px;
             color: darkslategray;
             margin-bottom: 20px;
+            text-align: center;
         }
         .content p,li{
             font-family: calibri;
@@ -27,6 +28,9 @@
             margin: 20px auto;
             padding: 20px;
             border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
         input[type="text"],
         input[type="password"]
@@ -47,6 +51,9 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            margin: 20px auto;
+            padding: 20px;
+
         }
         .submit{
             background-color: white;
@@ -61,6 +68,7 @@
         .submit:hover {
             background-color: #ddddc8;
         }
+        
     </style>
     <script src="https://kit.fontawesome.com/401936d941.js" crossorigin="anonymous"></script>
 </head>
@@ -101,7 +109,7 @@
         <h2>Sign In</h2>
         
         <div class="box">
-            <form>
+            <form id="signinForm">
                 <ul>
                     <li>
                         <i class="fa-solid fa-user"></i>
@@ -113,6 +121,9 @@
                     </li>
                     <li>
                         <input type="submit" value="Sign In" class="submit">
+                    </li>
+                    <li>
+                        <a href="signupPage.html" style="color: white; margin-left: 45px; font-size: 15px;">Sign Up Now</a>
                     </li>
                 </ul>
             </form>
@@ -134,6 +145,15 @@
         &copy; 2024 ForeverFamilyFinder. <br>All rights reserved.
     </div>
     
+    <script>
+        document.getElementById("signinForm").addEventListener("submit", function(event) {
+        event.preventDefault();   
+
+        alert("Successful Login!");
+        document.getElementById("signinForm").reset();
+        window.location.href = "mainPage.html";
+        });
+    </script>
 </body>
 
 </html>

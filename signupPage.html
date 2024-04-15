@@ -4,6 +4,74 @@
     <link rel="shortcut icon" type="image/png" href="logo.png" >
     <title>Sign Up</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .content{
+            font-family: sans-serif;
+            position: relative;
+        }
+        .content h2{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            color: darkslategray;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content p,li{
+            font-family: calibri;
+            font-size: 20px;
+            text-align: justify;
+        }
+        form {
+            width: 50%;
+            max-width:400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"]
+        {
+            height: 30px;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid darkslategray;
+            box-sizing: border-box;
+        }
+        .box{
+            color: white;
+            background-color: darkslategray;
+            border-radius: 5px;
+            width: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px auto;
+            padding: 20px;
+
+        }
+        .submit{
+            background-color: white;
+            color: darkslategrey;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+        }
+        .submit:hover {
+            background-color: #ddddc8;
+        }
+        
+    </style>
+    <script src="https://kit.fontawesome.com/401936d941.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -38,10 +106,35 @@
     </nav>
 
     <div class="content">
-        <li>
-            <i class="fa-solid fa-envelope"></i>                    
-            <input type="email" placeholder="Email" required>
-        </li>
+
+        <h2>Sign Up</h2>
+        
+        <div class="box">
+            <form id="signupForm">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username" required>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>                    
+                        <input type="email" placeholder="Email" required>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-lock"></i>                    
+                        <input type="password" placeholder="Password" id="password" required>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-lock"></i>                    
+                        <input type="password" placeholder="Re-enter Password" id="rePassword" required>
+                    </li>
+                    <li>
+                        <input type="submit" value="Sign Up" class="submit">
+                    </li>
+                </ul>
+            </form>
+        </div>
+        
     </div>
 
     <div class="footer">
@@ -58,6 +151,26 @@
         <br>
         &copy; 2024 ForeverFamilyFinder. <br>All rights reserved.
     </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+        event.preventDefault();   
+
+        var password = document.getElementById("password").value;
+        var rePassword = document.getElementById("rePassword").value;
+
+        if (password !== rePassword) {
+        alert("Passwords do not match! Please re-enter.");
+        return;
+    }
+
+        alert("signup successfuly!");
+        document.getElementById("signupForm").reset();
+        window.location.href = "signinPage.html";
+
+        });
+
+    </script>
 </body>
 
 </html>
