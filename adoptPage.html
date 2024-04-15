@@ -387,16 +387,25 @@
                 
                 if (highlightedContent === content) {
                     alert('Search term not found.');
+                    document.getElementById('searchInput').value = " ";
+                    return;
                 }
-                
+
+                var shouldReload = false;
                 document.body.addEventListener('click', function(event) {
-                if (event.target !== searchButton) {
-                    location.reload();
-                }
+                    if (event.target !== searchButton) {
+                        shouldReload = true;
+                        setTimeout(function() {
+                            if (shouldReload) {
+                                location.reload();
+                            }
+                        }, 1000);
+                    }
                 });
-            });
+            });    
         });
     </script>
+
 </body>
 
 </html>

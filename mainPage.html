@@ -125,23 +125,33 @@
 
         <div class="imgContainer">
             <div class="box">
-                <img src="adopt.jpeg" alt="adoption image">
+                <img src="adopt.jpeg" alt="adoption image" usemap="#image-map1">
+                <map name="image-map1">
+                    <area shape="rect" coords="0,0,335,270" href="https://youtu.be/BzWd9_uqEBg?si=8ashpUaHGYVHZ-DH">
+                </map>
                 <p>How to <strong>ADOPT</strong> a baby</p><br>
                 <a href="adoptPage.html" class="button">EXPLORE</a>
             </div>
             <div class="box">
-                <img src="chooseFamily.jpeg" alt="family image">
+                <img src="chooseFamily.jpeg" alt="family image" usemap="#image-map2">
+                <map name="image-map2">
+                    <area shape="rect" coords="0,0,335,270" href="https://youtu.be/FsSI-7kMp8w?si=08v5JftejzRdnohM">
+                </map>
                 <p><strong>CHOOSE AN ADOPTIVE </strong>family for <br> your baby</p><br>
                 <a href="chooseFamilyPage.html" class="button">CHOOSE</a>
             </div>
             <div class="box">
-                <img src="meet.jpeg" alt="meet children image">
+                <img src="meet.jpeg" alt="meet children image" usemap="#image-map3">
+                <map name="image-map3">
+                    <area shape="rect" coords="0,0,335,270" href="https://youtu.be/1SGi2Uu8gAE?si=eqIIiRfQK01Or0X-">
+                </map>
                 <p>Register for <strong>VIRTUAL MEETING</strong></p><br>
                 <a href="virtualMeetingPage.html" class="button">MEET KIDS</a>
             </div>
         </div>
+        <h4>(Click the above images and get to know about the experiences of people with us.)</h4>
 
-        <h2>About Us</h2>
+        <h2 style="margin-top: 40px;">About Us</h2>
         <p>At Forever Family Finder, we believe that every child deserves a loving and permanent home. With a passion for connecting children with their forever families, we are dedicated to facilitating the adoption process with care, compassion, and professionalism. Our team consists of experienced professionals who understand the complexities of adoption and are committed to supporting both prospective parents and children throughout their journey. Whether you're considering adoption or searching for the perfect addition to your family, Forever Family Finder is here to guide and support you every step of the way
             <a href="aboutUsPage.html" class="button1">LEARN MORE</a></p>
 
@@ -192,13 +202,25 @@
                 
                 if (highlightedContent === content) {
                     alert('Search term not found.');
+                    document.getElementById('searchInput').value = " ";
+                    return;
                 }
-                });
+
+                var shouldReload = false;
+
                 document.body.addEventListener('click', function(event) {
-                if (event.target !== searchButton) {
-                    location.reload();
-                }
-            });
+                    if (event.target !== searchButton) {
+                        shouldReload = true;
+                        setTimeout(function() {
+                            if (shouldReload) {
+                                location.reload();
+                            }
+                        }, 1000);
+                    }
+                });
+                
+                });
+                
         });
     </script>
 </body>

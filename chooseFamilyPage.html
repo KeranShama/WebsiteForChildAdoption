@@ -308,14 +308,25 @@
                 
                 if (highlightedContent === content) {
                     alert('Search term not found.');
+                    document.getElementById('searchInput').value = " ";
+                    return;
                 }
-                
-                document.body.addEventListener('click', function(event) {
-                if (event.target !== searchButton) {
-                    location.reload();
-                }
+                var shouldReload = false;
+                setTimeout(function() {
+                    shouldReload = true;
+                    document.body.addEventListener('click', function(event) {
+                        if (event.target !== searchButton) {
+                            shouldReload = false;
+                        }
+                    });
+
+                    if (shouldReload) {
+                        location.reload();
+                    }
+                }, 1000);
+
                 });
-            });
+                
         });
     </script>
 </body>
